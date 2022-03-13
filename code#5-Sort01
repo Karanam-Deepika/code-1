@@ -1,0 +1,52 @@
+PROGRAM
+
+#include<iostream>
+using namespace std;
+
+void sortArray(int arr[],int n)
+{
+	int leftp=0,rightp=n-1;
+	
+	while(leftp<rightp)
+	{
+		while(arr[leftp]==0 && leftp<rightp)
+		{
+			leftp++;
+		}
+		while(arr[rightp]==1 && leftp<rightp)
+		{
+			rightp--;
+		}
+		
+		
+		if(leftp<rightp)
+		{
+			swap(arr[leftp],arr[rightp]);
+			leftp++;
+			rightp--;
+		}
+	}
+	
+}
+void printArray(int arr[],int n)
+{
+	for(int i=0;i<n;i++)
+	{
+		cout<<arr[i]<<" ";
+	}
+	cout<<endl;
+ } 
+int main()
+{
+	int arr[8]={1,1,0,0,0,1,0,1};
+	sortArray(arr,8);
+	printArray(arr,8);
+	
+}
+
+################################################################################################################################################################################
+
+output:
+
+
+0 0 0 0 1 1 1 1 
