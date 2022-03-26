@@ -1,0 +1,31 @@
+Problem Statement:
+ Prinnt the minimum positive integer divisible by both 2 and N .
+ Input:3
+ Output:6
+ Expalanation:6 is divisible by both 2 and 3.Also,there is no  +ve integer less than 6 that is divisible by both 2 and 3.
+ 
+ 
+ 
+ 
+ 
+ 
+ #########################################################################################################################################################################
+ OUTPUT:
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i=0,n;
+    cin>>n;
+while(true)
+{
+    i++;
+    if((i%2==0) && (i%n==0))
+    {
+        cout<<i;
+        break;
+    }
+}
+
+    return 0;
+}
